@@ -3,12 +3,11 @@ layout: default
 title: Snippets
 ---
 
-
 <h1>{{ page.title }}</h1>
-
+<ul>
 {% for post in site.posts %}
-
-    {{ post.date | date: "%e.%B, %Y" }}
-    <a href="{{ post.url }}">{{ post.title }}</a>
-
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a> - Posted at {{ post.date | date: "%e. %B %Y" }}
+  </li>
 {% endfor %}
+</ul>
